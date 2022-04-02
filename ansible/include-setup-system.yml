@@ -13,7 +13,7 @@
       
       alias cdd="cd ~/dev"
       
-      alias gpull="git pull --rebase"
+      alias gpull="git pull --rebase --autostash"
       alias gpush="git push"
       alias gstat="git status"
       
