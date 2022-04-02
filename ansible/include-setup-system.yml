@@ -1,0 +1,43 @@
+---
+- name: Set up oh-my-zsh theme
+  lineinfile:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    regexp: "^ZSH_THEME="
+    line: 'ZSH_THEME="{{ oh_my_zsh_theme }}"'
+
+- name: Set up aliases and other misc. settings
+  blockinfile:
+    path: "{{ ansible_env.HOME }}/.zshrc"
+    block: |
+      alias ap="ansible-playbook"
+      
+      alias cdd="cd ~/dev"
+      
+      alias gpull="git pull --rebase"
+      alias gpush="git push"
+      alias gstat="git status"
+      
+      alias ll="ls -lh"
+      alias ls="exa"
+      
+      alias vim="nvim"
+      
+      alias ssh="TERM=xterm-256color ssh"
+      
+      alias tfi="terraform init"
+      alias tfp="terraform plan -out .plan"
+      alias tfa="terraform apply .plan"
+      
+      alias tm="tmux attach || tmux"
+      
+      # McFly history tool
+      export MCFLY_KEY_SCHEME=vim
+      eval "$(mcfly init zsh)"
+
+- name: Set up SSH config
+  blockinfile:
+    path: "{{ ansible_env.HOME }}/.ssh/config"
+    block: |
+      # Include homelab SSH config
+      Include {{ ansible_env.HOME }}/dev/homelab/ansible/ssh.cfg
+    insertbefore: BOF

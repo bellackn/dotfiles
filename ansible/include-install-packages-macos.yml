@@ -1,0 +1,16 @@
+---
+- name: Install Homebrew packages
+  community.general.homebrew:
+    name:
+      - bat
+      - bottom
+      - broot
+      - cantino/mcfly/mcfly
+      - dog
+      - exa
+      - gping
+      - ripgrep
+      - unnaturalscrollwheels
+    state: present
+  # unnaturalscrollwheels fails for some reason, so ignore errors here
+  ignore_errors: yes
