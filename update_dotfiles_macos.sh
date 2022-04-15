@@ -8,3 +8,4 @@ cp -r "$CONFIG_PATH/kitty" ansible/files/
 cp -r "$CONFIG_PATH/nvim" ansible/files
 
 cp "$HOME/.tmux.conf" ansible/files
+cp "$HOME/.skhdrc" ansible/files

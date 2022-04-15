@@ -22,3 +22,4 @@
         - { src: kitty, dst: "{{ ansible_env.HOME }}/.config/" }
         - { src: nvim, dst: "{{ ansible_env.HOME }}/.config/" }
         - { src: .tmux.conf, dst: "{{ ansible_env.HOME }}/" }
+        - { src: .skhdrc, dst: "{{ ansible_env.HOME }}/" }

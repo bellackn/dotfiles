@@ -1,0 +1,7 @@
+# prevent skhd from monitoring events for specific applications.
+.blacklist [
+   "kitty"
+]
+
+# Open kitty
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
