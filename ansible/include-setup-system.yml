@@ -1,4 +1,7 @@
 ---
+- name: Disable special-characters-popup when holding down a key
+  command: defaults write -g ApplePressAndHoldEnabled -bool false
+
 - name: Set up oh-my-zsh theme
   lineinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"
