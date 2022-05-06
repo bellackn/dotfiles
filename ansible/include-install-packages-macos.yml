@@ -18,4 +18,4 @@
   ignore_errors: yes
 
 - name: Enable skhd
-  command: /opt/homebrew/bin/brew services start skhd
+  command: brew services start skhd
