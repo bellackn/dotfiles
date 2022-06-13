@@ -15,6 +15,7 @@
       - gping
       - koekeishiya/formulae/skhd
       - ripgrep
+      - tree
       - unnaturalscrollwheels
     state: present
   # unnaturalscrollwheels fails for some reason, so ignore errors here
