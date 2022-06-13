@@ -11,6 +11,7 @@
       - duf
       - dust
       - exa
+      - glances
       - gping
       - koekeishiya/formulae/skhd
       - ripgrep
