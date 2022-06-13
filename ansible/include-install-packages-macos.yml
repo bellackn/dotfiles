@@ -6,8 +6,10 @@
       - bottom
       - broot
       - cantino/mcfly/mcfly
+      - coreutils
       - dog
       - duf
+      - dust
       - exa
       - gping
       - koekeishiya/formulae/skhd
