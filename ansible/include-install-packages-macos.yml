@@ -17,6 +17,7 @@
       - ripgrep
       - tree
       - unnaturalscrollwheels
+      - watch
     state: present
   # unnaturalscrollwheels fails for some reason, so ignore errors here
   ignore_errors: yes
