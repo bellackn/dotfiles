@@ -7,10 +7,12 @@
       - broot
       - cantino/mcfly/mcfly
       - coreutils
+      - dive
       - dog
       - duf
       - dust
       - exa
+      - gawk
       - glances
       - gping
       - koekeishiya/formulae/skhd
