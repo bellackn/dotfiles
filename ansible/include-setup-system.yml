@@ -18,7 +18,7 @@
       
       alias gpull="git pull --rebase --autostash"
       alias gpush="git push"
-      alias gstat="git status"
+      alias gs="git status"
       
       alias ll="ls -lh"
       alias ls="exa"
