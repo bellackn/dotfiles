@@ -17,6 +17,7 @@
       - gping
       - koekeishiya/formulae/skhd
       - ripgrep
+      - hudochenkov/sshpass/sshpass
       - tree
       - unnaturalscrollwheels
       - watch
