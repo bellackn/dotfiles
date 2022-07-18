@@ -15,6 +15,7 @@
       - gawk
       - glances
       - gping
+      - jq
       - koekeishiya/formulae/skhd
       - ripgrep
       - hudochenkov/sshpass/sshpass
