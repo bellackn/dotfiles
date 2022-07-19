@@ -42,5 +42,5 @@
     path: "{{ ansible_env.HOME }}/.ssh/config"
     block: |
       # Include homelab SSH config
-      Include {{ ansible_env.HOME }}/dev/homelab/ansible/ssh.cfg
+      Include {{ ansible_env.HOME }}/dev/private/homelab/ansible/ssh.cfg
     insertbefore: BOF
