@@ -12,10 +12,7 @@
   blockinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"
     block: |
-      # This is a fix for some Ansible tasks that might fail on M1 macs
-      export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-
-      alias ap="ansible-playbook"
+      alias ap="no_proxy=* ansible-playbook"
       
       alias cdd="cd ~/dev"
       

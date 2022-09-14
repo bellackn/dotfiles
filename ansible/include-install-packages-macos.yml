@@ -15,10 +15,13 @@
       - dust
       - exa
       - gawk
+      - gcc
       - glances
+      - gnu-tar
       - gping
       - jq
       - pandoc
+      - poppler
       - koekeishiya/formulae/skhd
       - ripgrep
       - hudochenkov/sshpass/sshpass
@@ -32,6 +35,8 @@
 
 - name: Install xelatex
   command: tlmgr install xelatex
+  become: yes
+  ignore_errors: yes
 
 - name: Enable skhd
   command: brew services start skhd
