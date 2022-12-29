@@ -1,0 +1,8 @@
+---
+- name: Set up local machine
+  hosts: localhost
+  gather_facts: yes
+
+  tasks:
+
+    - include_tasks: include-setup-{{ ansible_os_family | lower | replace(' ', '') | trim }}.yml

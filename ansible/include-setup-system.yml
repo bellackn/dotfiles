@@ -1,12 +1,14 @@
 ---
-- name: Disable special-characters-popup when holding down a key
-  command: defaults write -g ApplePressAndHoldEnabled -bool false
-
 - name: Set up oh-my-zsh theme
   lineinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"
     regexp: "^ZSH_THEME="
     line: 'ZSH_THEME="{{ oh_my_zsh_theme }}"'
+
+- name: Install tmux plugin manager
+  ansible.builtin.git:
+    repo: https://github.com/tmux-plugins/tpm.git
+    dest: ~/.tmux/plugins/tpm
 
 - name: Set up aliases and other misc. settings
   blockinfile:
@@ -16,8 +18,6 @@
       
       alias cdd="cd ~/dev"
       
-      alias gpull="git pull --rebase --autostash"
-      alias gpush="git push"
       alias gs="git status"
       
       alias ll="ls -lh"
