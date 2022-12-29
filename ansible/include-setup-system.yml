@@ -10,6 +10,21 @@
     repo: https://github.com/tmux-plugins/tpm.git
     dest: ~/.tmux/plugins/tpm
 
+- name: Install Vim plugin manager packer
+  ansible.builtin.git:
+    repo: https://github.com/wbthomason/packer.nvim
+    dest: ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+- name: Install cool Rust-based CLI tools
+  community.general.cargo:
+    name:
+      - bat
+      - bottom
+      - broot
+      - exa
+      - dust
+      - gping
+
 - name: Set up aliases and other misc. settings
   blockinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"

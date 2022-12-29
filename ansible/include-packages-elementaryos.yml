@@ -6,7 +6,6 @@
       - bat
       - jq
       - kitty
-      - neovim
       - ripgrep
       - tmux
     state: present
