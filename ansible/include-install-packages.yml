@@ -18,10 +18,12 @@
       - gnu-tar
       - gping
       - jq
+      - neovim
       - poppler
       - koekeishiya/formulae/skhd
       - ripgrep
       - hudochenkov/sshpass/sshpass
+      - tmux
       - tree
       - watch
       # The packages below fail for some reason when already installed. Others don't.
@@ -32,3 +34,9 @@
 
 - name: Enable skhd
   command: brew services start skhd
+
+# Also, run these commands to install Nerd Fonts:
+#
+# brew tap homebrew/cask-fonts
+# brew install --cask font-fira-code-nerd-font
+# brew install --cask font-hack-nerd-font

@@ -15,16 +15,6 @@
     repo: https://github.com/wbthomason/packer.nvim
     dest: ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-- name: Install cool Rust-based CLI tools
-  community.general.cargo:
-    name:
-      - bat
-      - bottom
-      - broot
-      - exa
-      - dust
-      - gping
-
 - name: Set up aliases and other misc. settings
   blockinfile:
     path: "{{ ansible_env.HOME }}/.zshrc"

@@ -23,7 +23,7 @@ vim.opt.autoindent = true
 vim.opt.showmatch = true
 vim.opt.ttyfast = true
 
-vim.opt.spell = true
+vim.opt.spell = false
 vim.opt.spelllang = "en"
 
 -- Theme
