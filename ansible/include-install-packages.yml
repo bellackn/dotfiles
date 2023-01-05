@@ -2,8 +2,6 @@
 - name: Install Homebrew packages
   community.general.homebrew:
     name:
-      - amethyst
-      - basictex
       - bat
       - bottom
       - broot
@@ -20,23 +18,17 @@
       - gnu-tar
       - gping
       - jq
-      - pandoc
       - poppler
       - koekeishiya/formulae/skhd
       - ripgrep
       - hudochenkov/sshpass/sshpass
-      - swaks
       - tree
-      - unnaturalscrollwheels
       - watch
+      # The packages below fail for some reason when already installed. Others don't.
+      #- amethyst
+      #- kitty
+      #- unnaturalscrollwheels
     state: present
-  # unnaturalscrollwheels fails for some reason, so ignore errors here
-  ignore_errors: yes
-
-- name: Install xelatex
-  command: tlmgr install xelatex
-  become: yes
-  ignore_errors: yes
 
 - name: Enable skhd
   command: brew services start skhd

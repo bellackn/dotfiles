@@ -52,10 +52,15 @@
       export MCFLY_KEY_SCHEME=vim
       eval "$(mcfly init zsh)"
 
+- name: Make sure SSH config exists
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.ssh/config"
+    state: touch
+
 - name: Set up SSH config
   blockinfile:
     path: "{{ ansible_env.HOME }}/.ssh/config"
     block: |
       # Include homelab SSH config
-      Include {{ ansible_env.HOME }}/dev/private/homelab/ansible/ssh.cfg
+      Include {{ ansible_env.HOME }}/dev/homelab/ansible/ssh.cfg
     insertbefore: BOF
