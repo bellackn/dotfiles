@@ -19,6 +19,7 @@
       - gping
       - jq
       - neovim
+      - nvm
       - poppler
       - koekeishiya/formulae/skhd
       - ripgrep
