@@ -17,6 +17,7 @@
       - glances
       - gnu-tar
       - gping
+      - java11
       - jq
       - neovim
       - nvm
