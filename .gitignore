@@ -2,3 +2,5 @@
 .idea
 
 nvim/plugin
+nvim/lua/config.lua+++
+kitty/kitty.conf.bak

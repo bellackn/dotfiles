@@ -4,10 +4,10 @@
 
 CONFIG_PATH="$HOME/.config"
 
-cp -r "$CONFIG_PATH/kitty" ../kitty
-cp -r "$CONFIG_PATH/nvim" ../nvim
+cp -r "$CONFIG_PATH"/kitty/* ../kitty
+cp -r "$CONFIG_PATH"/nvim/* ../nvim
 
-cp "$HOME/.tmux.conf" ../tmux
-cp "$HOME/.skhdrc" ../skhd
-cp "$HOME/.zshrc" ../zsh
+cp "$HOME"/.tmux.conf ../tmux
+cp "$HOME"/.skhdrc ../skhd
+cp "$HOME"/.zshrc ../zsh
 cp "$HOME/Library/Application Support/Code/User/settings.json" ../vscode
