@@ -1,6 +1,4 @@
 **/.DS_Store
-/.idea
+.idea
 
-/ansible/files/nvim/plugin
-/ansible/.collections
-/ansible/.roles
+nvim/plugin
