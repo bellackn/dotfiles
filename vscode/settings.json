@@ -1,3 +1,28 @@
 {
-    "workbench.colorTheme": "Dracula"
+  // General
+  "editor.fontSize": 16,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.rulers": [80],
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "telemetry.telemetryLevel": "off",
+  "workbench.colorTheme": "Atom One Light",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "One Dark Pro",
+  "workbench.preferredLightColorTheme": "Atom One Light",
+  // Git
+  "git.enableCommitSigning": true,
+  "gitlens.telemetry.enabled": false
+  "pre-commit-helper.runOnSave": "all hooks",
+  // Docker
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  // Python
+  "python.linting.flake8Enabled": true,
+  "autoDocstring.docstringFormat": "sphinx",
+  // Vim
+  "vim.useSystemClipboard": true
 }
