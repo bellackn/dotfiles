@@ -1,28 +1,66 @@
 {
   // General
-  "editor.fontSize": 16,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "editor.rulers": [80],
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "telemetry.telemetryLevel": "off",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "'Cascadia Mono PL'",
   "workbench.colorTheme": "Atom One Light",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "One Dark Pro",
   "workbench.preferredLightColorTheme": "Atom One Light",
+  
+  // Editor
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "'Cascadia Code'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.guides.bracketPairs": true,
+  "editor.rulers": [80],
+
   // Git
-  "git.enableCommitSigning": true,
-  "gitlens.telemetry.enabled": false
-  "pre-commit-helper.runOnSave": "all hooks",
-  // Docker
+  //"git.enableCommitSigning": true,
+  "gitlens.telemetry.enabled": false,
+  //"pre-commit-helper.runOnSave": "all hooks",
+
+  // Language/tool specifics
+  // -- Ansible
+  "[ansible]": {
+    "editor.detectIndentation": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.quickSuggestions": {
+        "comments": true,
+        "other": true,
+        "strings": true
+    }
+  },
+  "redhat.telemetry.enabled": false,
+  // -- Docker
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
-  // Python
+  // -- Python
   "python.linting.flake8Enabled": true,
   "autoDocstring.docstringFormat": "sphinx",
-  // Vim
+  // -- Web
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "node"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // -- Vim bindings
+  "vim.digraphs": {},
+  "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true
 }
