@@ -6,6 +6,7 @@
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "'Cascadia Mono PL'",
+  "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "Atom One Light",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.preferredDarkColorTheme": "One Dark Pro",
