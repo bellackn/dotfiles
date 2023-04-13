@@ -18,3 +18,9 @@ else
 fi
 
 cp "$VSCODE_SETTINGS" ../vscode
+
+if [[ $(uname -r) =~ 'ARCH' ]]; then
+    echo 'updating arch stuff'
+    cp "$HOME"/.xinitrc ../misc/
+    cp "$HOME"/.zprofile ../misc/
+fi

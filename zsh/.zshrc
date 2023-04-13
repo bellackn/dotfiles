@@ -114,10 +114,12 @@ alias tfa="terraform apply .plan"
 alias tm="tmux attach || tmux"
 
 # JAVA
-export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
-alias java11='export JAVA_HOME=$JAVA_11_HOME'
-#default java11
-export JAVA_HOME=$JAVA_11_HOME
+if [[ $(uname -o) != 'GNU/Linux' ]]; then
+    export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+    alias java11='export JAVA_HOME=$JAVA_11_HOME'
+    #default java11
+    export JAVA_HOME=$JAVA_11_HOME
+fi
 
 # McFly history tool
 export MCFLY_KEY_SCHEME=vim
@@ -131,3 +133,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# SSH agent setup on Arch
+if [[ $(uname -r) =~ 'ARCH' ]]; then
+  pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
+fi

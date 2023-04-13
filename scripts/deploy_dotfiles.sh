@@ -18,3 +18,10 @@ else
 fi
 
 cp ../vscode/settings.json "$VSCODE_SETTINGS"
+
+
+if [[ $(uname -r) =~ 'ARCH' ]]; then
+    echo 'deploying arch stuff'
+    cp ../misc/.xinitrc "$HOME"/
+    cp ../misc/.zprofile "$HOME"/
+fi
