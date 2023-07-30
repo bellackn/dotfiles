@@ -1,0 +1,7 @@
+import:
+  - ~/.config/alacritty/themes/themes/challenger_deep.yaml
+
+font:
+  size: 16
+  normal:
+    family: DroidSansMono Nerd Font

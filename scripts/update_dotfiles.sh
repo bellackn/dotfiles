@@ -6,6 +6,8 @@ CONFIG_PATH="$HOME/.config"
 
 cp -r "$CONFIG_PATH"/kitty/* ../kitty
 cp -r "$CONFIG_PATH"/nvim/* ../nvim
+cp "$CONFIG_PATH"/alacritty/* ../alacritty
+# Alacritty themes must be installed manually - see https://github.com/alacritty/alacritty-theme
 
 cp "$HOME"/.tmux.conf ../tmux
 cp "$HOME"/.skhdrc ../skhd
