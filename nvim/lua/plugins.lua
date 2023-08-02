@@ -23,10 +23,13 @@ return require("packer").startup(function(use)
 
     -- Programming in general
     use "tpope/vim-fugitive"
-    use "airblade/vim-gitgutter"
+    use { "airblade/vim-gitgutter", branch = "main" }
     use "jiangmiao/auto-pairs"
     use "cespare/vim-toml"
 
+    use { 'junegunn/fzf', run = ":call fzf#install()" }
+    use { 'junegunn/fzf.vim' }
+    
     -- Rust
     use "rust-lang/rust.vim"
     use "neovim/nvim-lspconfig"
