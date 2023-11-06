@@ -1,6 +1,7 @@
 # prevent skhd from monitoring events for specific applications.
 .blacklist [
-   "alacritty"
+   "alacritty",
+   "idea"
 ]
 
 # Open kitty
