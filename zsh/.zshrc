@@ -137,3 +137,5 @@ fi
 if [[ $(uname -r) =~ 'ARCH' ]]; then
   pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
