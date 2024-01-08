@@ -6,7 +6,7 @@ CONFIG_PATH="$HOME/.config"
 
 cp -r ../kitty/* "$CONFIG_PATH"/kitty/
 cp -r ../nvim/* "$CONFIG_PATH"/nvim/
-cp ../alacritty/alacritty.yml "$CONFIG_PATH"/alacritty/
+cp ../alacritty/alacritty.toml "$CONFIG_PATH"/alacritty/
 
 cp ../tmux/.tmux.conf "$HOME"/.tmux.conf
 cp ../skhd/.skhdrc "$HOME"/.skhdrc
