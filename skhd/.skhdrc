@@ -1,9 +1,0 @@
-# prevent skhd from monitoring events for specific applications.
-.blacklist [
-   "alacritty",
-   "idea"
-]
-
-# Open kitty
-cmd - return : /Applications/Alacritty.app/Contents/MacOs/alacritty
-
