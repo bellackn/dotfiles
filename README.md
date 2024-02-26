@@ -10,6 +10,8 @@ Various configuration files and setup scripts to get things running.
 git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
 ```
 
+Then, press `Ctrl + I` in a tmux window to install plugins from the config file.
+
 ### Install Vim plugin manager packer
 
 ```bash
