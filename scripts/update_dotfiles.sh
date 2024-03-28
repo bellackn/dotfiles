@@ -14,15 +14,15 @@ cp "$HOME"/.skhdrc ../skhd
 cp "$HOME"/.zshrc ../zsh
 
 if [[ $(uname -o) == "GNU/Linux" ]]; then
-    VSCODE_SETTINGS="$HOME/.config/VSCodium/User/settings.json"
+	VSCODE_SETTINGS="$CONFIG_PATH/VSCodium/User/settings.json"
 else
-    VSCODE_SETTINGS="$HOME/Library/Application Support/VSCodium/User/settings.json"
+	VSCODE_SETTINGS="$HOME/Library/Application Support/VSCodium/User/settings.json"
 fi
 
 cp "$VSCODE_SETTINGS" ../vscode
 
 if [[ $(uname -r) =~ 'ARCH' ]]; then
-    echo 'updating arch stuff'
-    cp "$HOME"/.xinitrc ../misc/
-    cp "$HOME"/.zprofile ../misc/
+	echo 'updating arch stuff'
+	cp "$HOME"/.xinitrc ../misc/
+	cp "$HOME"/.zprofile ../misc/
 fi
