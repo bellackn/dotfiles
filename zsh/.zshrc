@@ -139,7 +139,8 @@ fi
 # nvm
 source /usr/share/nvm/init-nvm.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
 
 # SSH agent setup on Arch
 # if [[ $(uname -r) =~ 'ARCH' ]]; then
