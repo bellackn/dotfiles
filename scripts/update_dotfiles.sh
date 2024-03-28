@@ -10,7 +10,6 @@ cp "$CONFIG_PATH"/alacritty/* ../alacritty
 # Alacritty themes must be installed manually - see https://github.com/alacritty/alacritty-theme
 
 cp "$HOME"/.tmux.conf ../tmux
-cp "$HOME"/.skhdrc ../skhd
 cp "$HOME"/.zshrc ../zsh
 
 if [[ $(uname -o) == "GNU/Linux" ]]; then

@@ -101,17 +101,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ap="no_proxy=* ansible-playbook"
+alias ag="ansible-galaxy"
 alias cdd="cd ~/dev"
 alias gs="git status"
 alias ls="exa"
 alias vim="nvim"
 alias ssh="TERM=xterm-256color ssh"
+alias j="just"
 
 alias tfi="terraform init"
 alias tfp="terraform plan -out .plan"
 alias tfa="terraform apply .plan"
 
 alias tm="tmux attach || tmux"
+
+alias sauron="miiocli roborockvacuum --ip 192.168.104.35 --token 743047726d56773530484a5a7a625045"
 
 # JAVA
 if [[ $(uname -o) != 'GNU/Linux' ]]; then
