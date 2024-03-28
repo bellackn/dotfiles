@@ -112,6 +112,8 @@ alias j="just"
 alias tfi="terraform init"
 alias tfp="terraform plan -out .plan"
 alias tfa="terraform apply .plan"
+alias vup="vagrant up"
+alias vdown="vagrant halt"
 
 alias tm="tmux attach || tmux"
 
@@ -134,6 +136,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# nvm
 source /usr/share/nvm/init-nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
