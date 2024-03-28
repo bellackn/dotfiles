@@ -4,7 +4,7 @@
 
 CONFIG_PATH="$HOME/.config"
 
-cp -r ../nvim/* "$CONFIG_PATH"/nvim/
+cp -r nvim/* "$CONFIG_PATH"/nvim/
 cp alacritty/alacritty.toml "$CONFIG_PATH"/alacritty/
 
 cp tmux/.tmux.conf "$HOME"/.tmux.conf
