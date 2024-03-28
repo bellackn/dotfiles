@@ -66,5 +66,5 @@
   // -- Vim bindings
   "vim.digraphs": {},
   "vim.smartRelativeLine": true,
-  "vim.useSystemClipboard": true,
+  "vim.useSystemClipboard": true
 }
