@@ -115,7 +115,7 @@ alias tfa="terraform apply .plan"
 
 alias tm="tmux attach || tmux"
 
-alias sauron="miiocli roborockvacuum --ip 192.168.104.35 --token 743047726d56773530484a5a7a625045"
+alias sauron="miiocli roborockvacuum --ip 192.168.104.35 --token SEE-KEEPASS"
 
 # JAVA
 if [[ $(uname -o) != 'GNU/Linux' ]]; then
@@ -129,17 +129,15 @@ fi
 export MCFLY_KEY_SCHEME=vim
 eval "$(mcfly init zsh)"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# SSH agent setup on Arch
-if [[ $(uname -r) =~ 'ARCH' ]]; then
-  pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
-fi
+source /usr/share/nvm/init-nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# SSH agent setup on Arch
+# if [[ $(uname -r) =~ 'ARCH' ]]; then
+#   pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
+# fi
