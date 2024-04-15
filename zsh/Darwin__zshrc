@@ -101,24 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ap="no_proxy=* ansible-playbook"
-alias ag="ansible-galaxy"
-alias cdd="cd ~/dev"
-alias gs="git status"
-alias ls="exa"
-alias vim="nvim"
-alias ssh="TERM=xterm-256color ssh"
-alias j="just"
-
-alias tfi="terraform init"
-alias tfp="terraform plan -out .plan"
-alias tfa="terraform apply .plan"
-alias vup="vagrant up"
-alias vdown="vagrant halt"
-
-alias tm="tmux attach || tmux"
-
-alias sauron="miiocli roborockvacuum --ip 192.168.104.35 --token SEE-KEEPASS"
+# -- aliases are defined in zsh_aliases! --
 
 # JAVA
 if [[ $(uname -o) != 'GNU/Linux' ]]; then
@@ -138,12 +121,7 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # nvm
-source /usr/share/nvm/init-nvm.sh
+source ~/.nvm/nvm.sh
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --zsh)"
-
-# SSH agent setup on Arch
-# if [[ $(uname -r) =~ 'ARCH' ]]; then
-#   pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
-# fi

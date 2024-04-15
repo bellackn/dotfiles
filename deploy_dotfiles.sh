@@ -3,16 +3,18 @@
 # Use this script to deploy the dotfiles in this repository.
 
 CONFIG_PATH="$HOME/.config"
+MACHINE="$(uname -s)"
 
 cp -r nvim/* "$CONFIG_PATH"/nvim/
-cp alacritty/alacritty.toml "$CONFIG_PATH"/alacritty/
+cp alacritty/"$MACHINE"__alacritty.toml "$CONFIG_PATH"/alacritty/alacritty.toml
 
 cp tmux/.tmux.conf "$HOME"/.tmux.conf
-cp zsh/.zshrc "$HOME"/.zshrc
+cp zsh/"$MACHINE"__zshrc "$HOME"/.zshrc
+cp zsh/aliases.zsh "$ZSH_CUSTOM"/
 
-if [[ $(uname -o) == "GNU/Linux" ]]; then
+if [[ "$MACHINE" == "Linux" ]]; then
 	VSCODE_SETTINGS="$CONFIG_PATH/VSCodium/User/settings.json"
-else
+elif [[ "$MACHINE" == "Darwin" ]]; then
 	VSCODE_SETTINGS="$HOME/Library/Application Support/VSCodium/User/settings.json"
 fi
 
