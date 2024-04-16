@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Use this script to deploy the dotfiles in this repository.
 
@@ -10,7 +10,7 @@ cp alacritty/"$MACHINE"__alacritty.toml "$CONFIG_PATH"/alacritty/alacritty.toml
 
 cp tmux/.tmux.conf "$HOME"/.tmux.conf
 cp zsh/"$MACHINE"__zshrc "$HOME"/.zshrc
-cp zsh/aliases.zsh "$ZSH_CUSTOM"/aliases.zsh
+cp zsh/aliases.zsh ~/.oh-my-zsh/custom/aliases.zsh
 
 if [[ "$MACHINE" == "Linux" ]]; then
 	VSCODE_SETTINGS_PATH="$CONFIG_PATH/VSCodium/User"
@@ -18,7 +18,7 @@ elif [[ "$MACHINE" == "Darwin" ]]; then
 	VSCODE_SETTINGS_PATH="$HOME/Library/Application Support/VSCodium/User/"
 fi
 
-mkdir -p $(dirname $VSCODE_SETTINGS)
+mkdir -p $(dirname $VSCODE_SETTINGS_PATH)
 cp vscode/"$MACHINE"__settings.json "$VSCODE_SETTINGS_PATH"/settings.json
 
 if [[ $(uname -r) =~ 'ARCH' ]]; then
