@@ -10,16 +10,16 @@ cp alacritty/"$MACHINE"__alacritty.toml "$CONFIG_PATH"/alacritty/alacritty.toml
 
 cp tmux/.tmux.conf "$HOME"/.tmux.conf
 cp zsh/"$MACHINE"__zshrc "$HOME"/.zshrc
-cp zsh/aliases.zsh "$ZSH_CUSTOM"/
+cp zsh/aliases.zsh "$ZSH_CUSTOM"/aliases.zsh
 
 if [[ "$MACHINE" == "Linux" ]]; then
-	VSCODE_SETTINGS="$CONFIG_PATH/VSCodium/User/settings.json"
+	VSCODE_SETTINGS_PATH="$CONFIG_PATH/VSCodium/User"
 elif [[ "$MACHINE" == "Darwin" ]]; then
-	VSCODE_SETTINGS="$HOME/Library/Application Support/VSCodium/User/settings.json"
+	VSCODE_SETTINGS_PATH="$HOME/Library/Application Support/VSCodium/User/"
 fi
 
 mkdir -p $(dirname $VSCODE_SETTINGS)
-cp vscode/settings.json "$VSCODE_SETTINGS"
+cp vscode/"$MACHINE"__settings.json "$VSCODE_SETTINGS_PATH"/settings.json
 
 if [[ $(uname -r) =~ 'ARCH' ]]; then
 	echo 'deploying arch stuff'
