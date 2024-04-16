@@ -130,3 +130,8 @@ eval "$(fzf --zsh)"
 # if [[ $(uname -r) =~ 'ARCH' ]]; then
 #   pgrep -x ssh-agent > /dev/null || ssh-agent -a $SSH_AUTH_SOCK
 # fi
+
+# Start tmux session
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
