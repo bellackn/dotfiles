@@ -19,12 +19,12 @@ if [[ "$gtk" = "$gtk_light" ]]; then
 	xfconf-query -c xsettings -p /Net/IconThemeName -s "$icons_dark"
 	xfconf-query -c xfce4-panel -p /panels/dark-mode -s true
 	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP/workspace0/last-image -s "$desktop_bg_dark"
-	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDisplayPort-6/workspace0/last-image -s "$desktop_bg_dark"
+	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDisplayPort-1/workspace0/last-image -s "$desktop_bg_dark"
 else
 	xfconf-query -c xsettings -p /Net/ThemeName -s "$gtk_light"
 	xfconf-query -c xfwm4 -p /general/theme -s "$xfwm_light"
 	xfconf-query -c xsettings -p /Net/IconThemeName -s "$icons_light"
 	xfconf-query -c xfce4-panel -p /panels/dark-mode -s false
 	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitoreDP/workspace0/last-image -s "$desktop_bg_light"
-	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDisplayPort-6/workspace0/last-image -s "$desktop_bg_light"
+	xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDisplayPort-1/workspace0/last-image -s "$desktop_bg_light"
 fi
