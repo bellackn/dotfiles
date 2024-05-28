@@ -25,4 +25,6 @@ if [[ $(uname -r) =~ 'ARCH' ]]; then
 	echo 'deploying arch stuff'
 	cp misc/.xinitrc "$HOME"/
 	cp misc/.zprofile "$HOME"/
+  # to reload gestures config, run `libinput-gestures-setup restart`
+  cp misc/libinput-gestures.conf "$CONFIG_PATH"/
 fi
