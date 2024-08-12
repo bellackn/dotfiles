@@ -2,12 +2,14 @@
 
 # light
 gtk_light="Matcha-light-azul"
+xfwm_light="Matcha-light-azul"
 icons_light="Papirus-Light"
 desktop_bg_light="/usr/share/backgrounds/xfce/mountains-1412683.jpg"
 alacritty_theme_light="papercolor_light"
 
 # dark
 gtk_dark="Matcha-dark-azul"
+xfwm_dark="Matcha-dark-azul"
 icons_dark="Papirus-Dark"
 desktop_bg_dark="/usr/share/backgrounds/manjaro-wallpapers-18.0/manjaro-cat.jpg"
 alacritty_theme_dark="challenger_deep"
