@@ -20,7 +20,7 @@ gtk="$(xfconf-query -c xsettings -p /Net/ThemeName)"
 # workaround for apps picking up the correct color scheme...
 xfce4-appearance-settings &
 pid=$!
-sleep 0.1
+sleep 0.5
 
 if [[ "$gtk" = "$gtk_light" ]]; then
   xfconf-query -c xsettings -p /Net/ThemeName -s "$gtk_dark"
