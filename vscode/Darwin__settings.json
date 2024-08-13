@@ -8,9 +8,8 @@
   "terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
   "terminal.integrated.fontSize": 14,
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Atom One Light",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.preferredDarkColorTheme": "Dracula",
+  "workbench.preferredDarkColorTheme": "Abyss",
   "workbench.preferredLightColorTheme": "Atom One Light",
 
   // Editor
