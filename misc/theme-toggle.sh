@@ -17,12 +17,8 @@ alacritty_theme_dark="challenger_deep"
 # current mode determined by gtk theme
 gtk="$(xfconf-query -c xsettings -p /Net/ThemeName)"
 
-# workaround for apps picking up the correct color scheme...
-xfce4-appearance-settings &
-pid=$!
-sleep 0.5
-
 if [[ "$gtk" = "$gtk_light" ]]; then
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
   xfconf-query -c xsettings -p /Net/ThemeName -s "$gtk_dark"
   xfconf-query -c xfwm4 -p /general/theme -s "$xfwm_dark"
   xfconf-query -c xsettings -p /Net/IconThemeName -s "$icons_dark"
@@ -31,6 +27,7 @@ if [[ "$gtk" = "$gtk_light" ]]; then
   xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorDisplayPort-1/workspace0/last-image -s "$desktop_bg_dark"
   sed -i -e "s/$alacritty_theme_light/$alacritty_theme_dark/" ~/.config/alacritty/alacritty.toml
 else
+  gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
   xfconf-query -c xsettings -p /Net/ThemeName -s "$gtk_light"
   xfconf-query -c xfwm4 -p /general/theme -s "$xfwm_light"
   xfconf-query -c xsettings -p /Net/IconThemeName -s "$icons_light"
@@ -40,5 +37,4 @@ else
   sed -i -e "s/$alacritty_theme_dark/$alacritty_theme_light/" ~/.config/alacritty/alacritty.toml
 fi
 
-kill $pid
 exit 0
